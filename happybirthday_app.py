@@ -23,6 +23,5 @@ st.markdown(
 )
 
 st.snow()
-st.gift()
 st.balloons()
 st.kiss()
