@@ -23,6 +23,6 @@ st.markdown(
 )
 
 st.snow()
-st.hearts()
+st.heart()
 st.balloons()
 st.kiss()
