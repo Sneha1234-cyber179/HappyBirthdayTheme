@@ -1,55 +1,87 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="Happy Birthday Thejas Srivatsa 🎂",
+    page_icon="🎂",
+    layout="centered"
+)
+
+st.balloons()
+
 st.markdown("""
 <style>
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #ff69b4,
-                     0 0 20px #ff69b4,
-                     0 0 30px #ff1493;
+.crystal-title{
+    text-align:center;
+    font-size:65px;
+    font-weight:900;
+    color:#ff69b4;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffb6c1,
+        0 0 20px #ff69b4,
+        0 0 40px #ff1493;
+    animation: glow 2s infinite alternate;
+    margin-bottom:10px;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #ffb6c1,
+            0 0 20px #ff69b4;
     }
-    50% {
-        text-shadow: 0 0 20px #ffb6c1,
-                     0 0 40px #ff69b4,
-                     0 0 60px #ff1493;
-    }
-    100% {
-        text-shadow: 0 0 10px #ff69b4,
-                     0 0 20px #ff69b4,
-                     0 0 30px #ff1493;
+    to{
+        text-shadow:
+            0 0 10px #ffffff,
+            0 0 20px #ffb6c1,
+            0 0 40px #ff69b4,
+            0 0 70px #ff1493;
     }
 }
 
-@keyframes popHeart {
-    0% {
-        transform: scale(0.5);
-        opacity: 0.5;
+.hearts{
+    text-align:center;
+    font-size:38px;
+    animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
     }
-    50% {
-        transform: scale(1.4);
-        opacity: 1;
+    50%{
+        transform:scale(1.25);
     }
-    100% {
-        transform: scale(1);
-        opacity: 0.8;
+    100%{
+        transform:scale(1);
     }
 }
 
-.crystal-title {
-    font-size: 60px;
-    font-weight: 900;
-    color: #ff69b4;
-    animation: glow 2s infinite;
-    text-align: center;
+.message-box{
+    text-align:center;
+    padding:10px;
 }
 
-.hearts {
-    font-size: 35px;
-    animation: popHeart 1.2s infinite;
+.name{
+    color:#ff1493;
+    font-size:38px;
+    font-weight:bold;
+}
+
+.wish{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.footer{
+    font-size:42px;
 }
 
 </style>
 
-<div style="text-align:center; padding:10px;">
+<div class="message-box">
 
 <div class="hearts">
 💖 💕 💗 💞 💘 💝 💘 💞 💗 💕 💖
@@ -63,31 +95,51 @@ st.markdown("""
 💖 💕 💗 💞 💘 💝 💘 💞 💗 💕 💖
 </div>
 
-<h2>💖 My Dear Thejas Srivatsa 💖</h2>
+<br>
 
-<p style="font-size:30px;">
+<div class="name">
+💖 My Dear Thejas Srivatsa 💖
+</div>
+
+<br>
+
+<div style="font-size:32px;">
 🎈🎈🎈🎈🎈<br>
 💖💖💖💖💖<br>
 😘😘😘😘😘
-</p>
+</div>
 
-<h3>❤️ Wishing you a day filled with happiness, laughter, and love! ❤️</h3>
+<br>
 
-<h3>🌟 May all your dreams come true. 🌟</h3>
+<div class="wish">
+❤️ Wishing you a day filled with happiness, laughter, and love! ❤️
+<br><br>
+🌟 May all your dreams come true. 🌟
+<br><br>
+🎁 Have an amazing year ahead! 🎁
+<br><br>
+💕 With lots of love 💕
+</div>
 
-<h3>🎁 Have an amazing year ahead! 🎁</h3>
+<br>
 
-<h3>💕 With lots of love 💕</h3>
-
-<p style="font-size:35px;">
+<div style="font-size:36px;">
 🎉🥳🎂❤️🎈🎁✨💖🌹🎊
-</p>
+</div>
 
-<h2>🎂❤️ Happy Birthday, Thejas Srivatsa! ❤️🎂</h2>
+<br>
 
-<p style="font-size:40px;">
+<div class="name">
+🎂❤️ Happy Birthday, Thejas Srivatsa! ❤️🎂
+</div>
+
+<br>
+
+<div class="footer">
 💋 💖 🎁 💝 🎀 💐 💘
-</p>
+</div>
 
 </div>
 """, unsafe_allow_html=True)
+
+st.snow()
